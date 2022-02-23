@@ -53,6 +53,7 @@ public:
 };
 int main()
 {
-
+    Solution s1;
+    cout<<s1.isNumber("2e10")<<endl;
     return 0;
 }
