@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <algorithm>
 using namespace std;
 class Solution
 {
@@ -34,13 +35,14 @@ public:
         else
             for (auto dir : dirs)
                 out << "/" << dir;
-        
+
         return out.str();
     }
 };
 
 int main()
 {
-
+    Solution s1;
+    cout << s1.simplifyPath("/a/./b/../../c/") << endl;
     return 0;
 }
