@@ -24,9 +24,66 @@ struct TreeNode
 class Solution
 {
 public:
-    TreeNode *readTree(int nodes[])
+    vector<int> inorderTraversal(TreeNode *root)
     {
+        vector<int> result;
+        stack<const TreeNode *> S;
+        const TreeNode *P = root;
+        while (!S.empty() || P != nullptr)
+        {
+            if (P != nullptr)
+            {
+                S.push(P);
+                P = P->left;
+            }
+            else
+            {
+                P = S.top();
+                S.pop();
+                result.push_back(P->val);
+                P = P->right;
+            }
+        }
+        return result;
+    }
+
+    void recoverTree(TreeNode *root)
+    {
+        vector<TreeNode *> result;
+        stack<TreeNode *> S;
+        TreeNode *P = root;
+        TreeNode *left = nullptr;
+        TreeNode *right = nullptr;
+        while (P != nullptr || !S.empty())
+        {
+            if (P != nullptr)
+            {
+                S.push(P);
+                P = P->left;
+            }
+            else
+            {
+                P = S.top();
+                S.pop();
+                result.push_back(P);
+                P = P->right;
+            }
+        }
         
+        for(size_t i=1;i<result.size();i++)
+        {
+            if(result[i]->val > result[i-1]->val)
+            {
+                left = result[i-1];
+                break;
+            }
+                
+        }
+
+        for(size_t i=result.size()-1;i>0;i--)
+        {
+            if()
+        }
     }
 };
 

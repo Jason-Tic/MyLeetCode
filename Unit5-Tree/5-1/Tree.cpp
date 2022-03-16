@@ -15,7 +15,7 @@ void Tree<T>::ReadTree(vector<string> &nodes)
         this->root = node;
         if(nodes[i]!="null")
         {
-
+            
         }
     }
 }
