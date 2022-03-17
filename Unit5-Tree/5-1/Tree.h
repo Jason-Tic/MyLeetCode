@@ -18,6 +18,6 @@ public:
     Tree(NodeType *r) : root(r) {}
     ~Tree();
     void ReadTree(vector<string> &nodes);
-}
+};
 
 #endif

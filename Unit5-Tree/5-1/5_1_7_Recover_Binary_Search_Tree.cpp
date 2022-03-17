@@ -11,6 +11,7 @@
  */
 #include <iostream>
 #include <vector>
+#include <stack>
 using namespace std;
 struct TreeNode
 {
@@ -69,24 +70,37 @@ public:
                 P = P->right;
             }
         }
-        
-        for(size_t i=1;i<result.size();i++)
+
+        for (size_t i = 0; i < result.size()-1; i++)
         {
-            if(result[i]->val > result[i-1]->val)
+            if (result[i]->val > result[i + 1]->val)
             {
-                left = result[i-1];
+                left = result[i];
                 break;
             }
-                
         }
 
-        for(size_t i=result.size()-1;i>0;i--)
+        for (size_t i = result.size() - 1; i > 0; i--)
         {
-            if()
+            if (result[i]->val < result[i - 1]->val)
+            {
+                right = result[i];
+                break;
+            }
         }
+
+        int num = left->val;
+        left->val = right->val;
+        right->val = num;
     }
 };
 
 int main()
 {
+    TreeNode *root = new TreeNode(1);
+    root->left = new TreeNode(3);
+    root->left->right = new TreeNode(2);
+    Solution S1;
+    S1.recoverTree(root);
+    // cout<<root->val<<endl;
 }
