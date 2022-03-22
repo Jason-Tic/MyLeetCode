@@ -14,10 +14,14 @@ class Tree
 private:
     NodeType *root;
 
+    NodeType* createBinTree(string nodes[])
+
 public:
+    Tree():root(nullptr);
     Tree(NodeType *r) : root(r) {}
     ~Tree();
-    void ReadTree(vector<string> &nodes);
+    void CreateTree(string nodes[]);
+    
 };
 
 #endif
