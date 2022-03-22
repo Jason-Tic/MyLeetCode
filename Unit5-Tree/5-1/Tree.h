@@ -14,10 +14,10 @@ class Tree
 private:
     NodeType *root;
 
-    NodeType* createBinTree(string nodes[])
+    NodeType* createBinTree(string[] nodes);
 
 public:
-    Tree():root(nullptr);
+    Tree() = default;
     Tree(NodeType *r) : root(r) {}
     ~Tree();
     void CreateTree(string nodes[]);

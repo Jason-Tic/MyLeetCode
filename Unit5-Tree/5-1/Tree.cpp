@@ -1,5 +1,5 @@
 #include "Tree.h"
-#include <stack>
+#include <queue>
 #include<string>
 template <typename T>
 void Tree<T>::CreateTree(string nodes[])        //按照层序遍历创建树
@@ -24,5 +24,18 @@ void Tree<T>::CreateTree(string nodes[])        //按照层序遍历创建树
 
     }
 
+}
+
+NodeType* Tree<T>::createBinTree(string[] nodes)
+{
+    if(nodes.length()==0||nodes.empty()||nodes[0]=="null")
+        return nullptr;
+    
+    size_t index = 0;
+    size_t length = nodes.length();
+
+    TreeNode root = new TreeNode(stoi(nodes[0]);
+    queue<TreeNode> nodeQueue ;
+    nodeQueue.push(root);
 }
 

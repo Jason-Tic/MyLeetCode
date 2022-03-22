@@ -16,10 +16,9 @@ class TreeNode
         TreeNode<T> *lchild;
         TreeNode<T> *rchild;
 
+        TreeNode() = default;
         TreeNode():val(0),lchild(nullptr),rchild(nullptr){}
-        TreeNode(T x):val(x),lchild(nullptr),rchild(nullptr){}
-
-        
+        TreeNode(T x):val(x),lchild(nullptr),rchild(nullptr){}       
 };
 
 // struct TreeNode
