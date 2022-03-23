@@ -18,15 +18,17 @@ void Tree<T>::CreateTree(string nodes[])        //按照层序遍历创建树
             
     //     }
     // }
-    if(nodes->empty()) return;
-    if(this->root == nullptr)
-    {
 
-    }
+    // if(nodes->empty()) return;
+    // if(this->root == nullptr)
+    // {
+
+    // }
 
 }
 
-NodeType* Tree<T>::createBinTree(string[] nodes)
+template <typename T>
+TreeNode<T>* Tree<T>::createBinTree(vector<T> nodes)
 {
     if(nodes.length()==0||nodes.empty()||nodes[0]=="null")
         return nullptr;
@@ -34,7 +36,7 @@ NodeType* Tree<T>::createBinTree(string[] nodes)
     size_t index = 0;
     size_t length = nodes.length();
 
-    TreeNode root = new TreeNode(stoi(nodes[0]);
+    TreeNode root = new TreeNode(stoi(nodes[0]));
     queue<TreeNode> nodeQueue ;
     nodeQueue.push(root);
 }

@@ -7,21 +7,17 @@ template <typename T>
 class TreeNode;
 
 template <typename T>
+
 class Tree
 {
-    typedef TreeNode<T> NodeType;
-
 private:
-    NodeType *root;
-
-    NodeType* createBinTree(string[] nodes);
-
+    TreeNode<T> *root;
 public:
     Tree() = default;
-    Tree(NodeType *r) : root(r) {}
+    Tree(TreeNode<T> *r) : root(r) {}
     ~Tree();
     void CreateTree(string nodes[]);
-    
+    TreeNode<T>* createBinTree(vector<T> nodes);
 };
 
 #endif
