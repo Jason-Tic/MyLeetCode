@@ -1,8 +1,8 @@
 #include "Tree.h"
 #include <queue>
-#include<string>
+#include <string>
 template <typename T>
-void Tree<T>::CreateTree(string nodes[])        //按照层序遍历创建树
+void Tree<T>::CreateTree(string nodes[]) //按照层序遍历创建树
 {
     // if (nodes.empty()||nodes[0]=="null")
     // {
@@ -11,11 +11,11 @@ void Tree<T>::CreateTree(string nodes[])        //按照层序遍历创建树
     // }
     // for (int i = 0; i < nodes.size(); i++)
     // {
-    //     TreeNode<T>* node = new TreeNode(static_cast<T>vector[0]); 
+    //     TreeNode<T>* node = new TreeNode(static_cast<T>vector[0]);
     //     this->root = node;
     //     if(nodes[i]!="null")
     //     {
-            
+
     //     }
     // }
 
@@ -24,20 +24,18 @@ void Tree<T>::CreateTree(string nodes[])        //按照层序遍历创建树
     // {
 
     // }
-
 }
 
 template <typename T>
-TreeNode<T>* Tree<T>::createBinTree(vector<T> nodes)
+TreeNode<T> *Tree<T>::createBinTree(vector<T> nodes)
 {
-    if(nodes.length()==0||nodes.empty()||nodes[0]=="null")
+    if (nodes.empty() || nodes[0] == "null")
         return nullptr;
-    
+
     size_t index = 0;
     size_t length = nodes.length();
 
-    TreeNode root = new TreeNode(stoi(nodes[0]));
-    queue<TreeNode> nodeQueue ;
+    TreeNode<T> root = new TreeNode(stoi(nodes[0]));
+    queue<TreeNode<T> *> nodeQueue;
     nodeQueue.push(root);
 }
-
